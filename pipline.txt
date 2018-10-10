@@ -3,6 +3,7 @@ node {
    stage('Preparation') { // for display purposes
       git 'https://github.com/nileshdevdas/siemense2e'
       mvnHome = tool 'M3'
+      env.JAVA_HOME = tool name: 'jdk1.8.0_181'
    }
    stage('Build') {
       if (isUnix()) {
